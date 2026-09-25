@@ -1,15 +1,22 @@
-# Noluthando's GitHub Pages repository
+# Noluthando Basi — Project showcase
 
-This repository is reserved for a future GitHub Pages portfolio.
+A responsive GitHub Pages site presenting five public programming projects: Circuit Desk, Student Budget Calculator, Python Maze Game, Rock Paper Scissors in C, and Done.
 
-For now, visit my [engineering portfolio](https://oye-engineering-portfolio.oyeoged.chatgpt.site/),
-[GitHub profile](https://github.com/ZuluBarbie), or
-[LinkedIn](https://www.linkedin.com/in/noluthandobasi).
+## Preview
 
-## Projects
+Open `index.html` in a browser, or run `python -m http.server 4174 --bind 127.0.0.1` and visit http://127.0.0.1:4174. No dependencies, JavaScript, or build step are required.
 
-- [Circuit Desk — Java electronic component calculator](https://github.com/ZuluBarbie/electronic-component-calculator)
-- [Student Budget Calculator — Python](https://github.com/ZuluBarbie/student-budget-calculator)
-- [Python Maze Game](https://github.com/ZuluBarbie/Practice)
-- [Rock Paper Scissors — C](https://github.com/ZuluBarbie/rock_paper_scissors_C)
+## Edit
 
+- `index.html`: project descriptions, public repository links, and profile links.
+- `styles.css`: responsive layout, colours, and typography.
+
+Descriptions reflect the linked repositories' documented scope. Repository links lead to source code and local setup instructions; they are not hosted app demos. Keep this public page free of private repository details and browser-local portfolio data.
+
+## Publishing
+
+GitHub Pages is configured to publish from the default branch. Merging a change to `main` can trigger publication at https://zulubarbie.github.io/. Preview and review pull requests before merging.
+
+## Check before publishing
+
+Open the page at desktop and mobile widths, navigate by keyboard, and verify the five project links and profile links. The page works without JavaScript and respects reduced-motion preferences.
