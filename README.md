@@ -1,6 +1,10 @@
 # Noluthando Basi — Project showcase
 
-A responsive GitHub Pages site presenting five public programming projects: Circuit Desk, Student Budget Calculator, Python Maze Game, Rock Paper Scissors in C, and Done.
+A responsive GitHub Pages portfolio presenting ten programming and engineering projects.
+
+## Featured coursework
+
+[1-bit NAND ALU case study](projects/alu/README.md): a CPUT group project led by Noluthando Palesa Basi as the primary contributor. The public summary covers design evolution, netlist verification and learning. [View on the website](https://zulubarbie.github.io/alu.html). ALU material is shared with rights reserved; see [its copyright notice](projects/alu/COPYRIGHT.md).
 
 ## Preview
 
@@ -19,4 +23,4 @@ GitHub Pages is configured to publish from the default branch. Merging a change 
 
 ## Check before publishing
 
-Open the page at desktop and mobile widths, navigate by keyboard, and verify the five project links and profile links. The page works without JavaScript and respects reduced-motion preferences.
+Open the page at desktop and mobile widths, navigate by keyboard, and verify the ten project links and profile links. The page works without JavaScript and respects reduced-motion preferences.
