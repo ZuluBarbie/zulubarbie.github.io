@@ -1,0 +1,27 @@
+/* Homepage-only night palette; project case-study styles remain independent. */
+.night-home{--paper:#080b18;--ink:#f4f0ff;--muted:#b9b8cb;--line:#302c48;--accent:#c2a0ff;--cyan:#b4dfff;background:var(--paper)}
+.night-home .masthead{max-width:none;padding-inline:max(32px,calc((100% - 1096px)/2));background:#080b18;border-color:#242139}
+.night-home .wordmark span{color:var(--accent);text-shadow:0 0 18px #aa72ff70}
+.night-home .intro{isolation:isolate;position:relative;max-width:none;min-height:760px;height:min(850px,calc(100svh - 108px));margin-inline:calc(50% - 50vw);padding:65px max(32px,calc((100vw - 1096px)/2)) 260px;overflow:hidden;background:#080b18}
+.night-scene{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom}
+.intro::before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#080b186b,transparent 75%),linear-gradient(0deg,#080b18,transparent 12%)}
+.intro-copy{max-width:650px}
+.night-home .intro .eyebrow{color:#d0b6ff;font-size:10px;letter-spacing:.2em}
+.night-home h1{font-size:clamp(46px,6.2vw,80px);font-weight:650;letter-spacing:-.055em}
+.night-home h1 em{color:#d0adff;text-shadow:0 0 40px #9b61ff35}
+.night-home .intro .lead{color:#d0cedd;max-width:550px;font-size:17px;text-shadow:0 2px 12px #080b18}
+.intro-actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.night-home .button{background:#c2a0ff;border-color:#d0b6ff;box-shadow:0 0 28px #aa72ff26;color:#130d24}
+.night-home .button:hover{background:#dac5ff;box-shadow:0 0 35px #aa72ff40}
+.journey-link{font-size:13px;font-weight:650;text-decoration:none;color:#eee6ff}
+.journey-link span{margin-left:8px;color:#c2a0ff}
+.night-home .intro-note{color:#bab8cf}
+.scene-caption{position:absolute;bottom:25px;left:max(32px,calc((100vw - 1096px)/2));color:#b9adc9;font-size:9px;letter-spacing:.22em}
+.night-home .card{background:#111222;border-color:#302c48}
+.night-home .card:hover{border-color:#9474bc}
+.night-home .card.featured{background:linear-gradient(120deg,#231a38,#111222 75%);border-color:#7e609f;box-shadow:inset 3px 0 #c2a0ff,0 0 32px #aa72ff0d}
+.night-home .tag,.night-home .featured .tag{background:#c2a0ff08;border-color:#514162;color:#d0b6ff}
+.night-home .skip-link{color:#130d24}
+@media(min-width:1600px){.night-home .intro{height:850px}}
+@media(max-width:760px){.night-home .intro{height:auto;min-height:830px;padding:50px 24px 330px}.intro-copy{max-width:570px}.night-scene{height:auto;min-height:360px;top:auto;bottom:0;object-fit:cover;object-position:70% bottom}.intro::before{background:linear-gradient(180deg,#080b18 0%,#080b18 48%,transparent 74%,#080b18 100%)}.night-home .intro .lead{font-size:16px}.night-home .intro .eyebrow{font-size:9px;letter-spacing:.12em}.scene-caption{left:24px;bottom:18px;font-size:8px}.night-home .masthead{padding-inline:24px}.intro-actions{gap:18px}.night-home h1{font-size:clamp(44px,9vw,64px)}}
+@media(max-width:380px){.night-home .intro{min-height:870px}.night-home .masthead{gap:12px}nav{gap:10px;font-size:11px}}
