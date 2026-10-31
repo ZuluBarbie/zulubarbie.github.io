@@ -7,6 +7,8 @@
   <title>Noluthando Basi | Computer Engineering Portfolio</title>
   <link rel="stylesheet" href="styles.css?v=purple-brand-2">
   <link rel="stylesheet" href="home.css?v=pixel-night-1">
+  <link rel="stylesheet" href="interactive.css?v=1">
+  <script src="interactive.js?v=1" defer></script>
   <meta name="theme-color" content="#080b18">
   <link rel="canonical" href="https://zulubarbie.github.io/">
   <meta property="og:title" content="Noluthando Basi | Computer Engineering Portfolio">
@@ -45,7 +47,17 @@
     </section>
     <section id="projects" aria-labelledby="projects-title">
       <div class="section-heading"><div><p class="eyebrow">02 / SELECTED WORK</p><h2 id="projects-title">Ten projects. Real practice.</h2></div><p>Software projects and engineering case studies.<br>Explore the work and what I learned.</p></div>
-      <div class="project-grid">
+      <div class="project-tools" hidden>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" data-filter="all" aria-pressed="true">All projects</button>
+          <button type="button" data-filter="engineering" aria-pressed="false">Engineering</button>
+          <button type="button" data-filter="apps" aria-pressed="false">Apps &amp; tools</button>
+          <button type="button" data-filter="games" aria-pressed="false">Games</button>
+        </div>
+        <label class="project-search">Find a project<input type="search" placeholder="Try Python or Snake…" aria-controls="project-results"></label>
+      </div>
+      <p class="result-count" role="status" hidden></p>
+      <div class="project-grid" id="project-results">
         <article class="card featured">
           <div class="card-top"><span class="number">01</span><span class="tag">JAVA · SWING</span></div>
           <h3>Circuit Desk</h3><p class="subtitle">Electronic component calculator</p>
@@ -111,8 +123,13 @@
         </article>
       </div>
     </section>
+    <section class="logic-lab contact" aria-labelledby="lab-title" hidden>
+      <div><p class="eyebrow">03 / A LITTLE EXPERIMENT</p><h2 id="lab-title">Two inputs. One bright idea.</h2><p class="lead">Meet the NAND gate—the building block of my ALU project. Flip the inputs and see what happens.</p><a href="alu.html">See how these gates become an ALU ↗</a></div>
+      <div class="gate-panel"><p class="gate-label">NAND / LIVE LOGIC</p><div class="gate-circuit"><div class="gate-inputs"><button type="button" data-input="a" aria-pressed="false">A <span>0</span></button><button type="button" data-input="b" aria-pressed="false">B <span>0</span></button></div><span class="gate-symbol" aria-hidden="true">&amp; ○</span><output class="gate-output" aria-live="polite" aria-atomic="true">Output <strong>1</strong></output></div><p class="gate-explanation">The output is on unless both inputs are on.</p></div>
+    </section>
     <section id="contact" class="contact" aria-labelledby="contact-title"><p class="eyebrow">KEEP IN TOUCH</p><h2 id="contact-title">Let’s connect.</h2><p class="lead">Explore my code on GitHub or connect with me on LinkedIn to follow my engineering journey.</p><div class="contact-links"><a href="https://github.com/ZuluBarbie">GitHub ↗</a><a href="https://www.linkedin.com/in/noluthandobasi">LinkedIn ↗</a></div></section>
   </main>
   <footer class="wrap"><span>Noluthando Basi</span><span>Built with curiosity. Shared through code.</span></footer>
+  <dialog class="project-dialog" aria-labelledby="preview-title"><button class="dialog-close" type="button" aria-label="Close project preview">×</button><div class="preview-content"></div></dialog>
 </body>
 </html>
