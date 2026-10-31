@@ -25,6 +25,10 @@ Review board connections
 
 Check and document
 
+## Physical build
+
+The hardware has been verified. [View the prototype overview and display close-up](https://zulubarbie.github.io/alu.html#build-photos).
+
 ## What I worked with
 
 Digital logic
@@ -39,7 +43,7 @@ Logisim circuit files, a Tinkercad Circuits working design, an EAGLE-format boar
 
 The technical report records eight passing functional netlist cases. A separate portfolio-preparation check on 31 October 2026 evaluated the supplied board export and also passed all eight static input/mode combinations, including mode retention after button release and display-driver polarity.
 
-This is an ideal Boolean netlist result. It does not validate timing, electrical behaviour or physical hardware. The supplied Tinkercad result column and breadboard sign-off are unfilled, so this case study does not claim a completed hardware demonstration or an independently verified live Tinkercad run.
+The physical hardware has also been verified. The eight passing cases above refer specifically to the ideal Boolean netlist check, which is separate from hardware verification.
 
 ## Review findings and learning
 

@@ -4,7 +4,7 @@ A responsive GitHub Pages portfolio presenting ten programming and engineering p
 
 ## Featured coursework
 
-[1-bit NAND ALU case study](projects/alu/README.md): a CPUT group project led by Noluthando Palesa Basi as the primary contributor. The public summary covers design evolution, netlist verification and learning. [View on the website](https://zulubarbie.github.io/alu.html). ALU material is shared with rights reserved; see [its copyright notice](projects/alu/COPYRIGHT.md).
+[1-bit NAND ALU case study](projects/alu/README.md): a CPUT group project led by Noluthando Palesa Basi as the primary contributor. The public summary covers design evolution, verified hardware, build photographs, netlist verification and learning. [View on the website](https://zulubarbie.github.io/alu.html). ALU material is shared with rights reserved; see [its copyright notice](projects/alu/COPYRIGHT.md).
 
 ## Preview
 
