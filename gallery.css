@@ -1,6 +1,6 @@
-.photo-demo{min-width:0;margin:0 0 24px}
-.photo-demo .demo-full{display:block;margin:0!important;background:#080b18;border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.photo-demo .demo-image{display:block;width:100%;height:340px;object-fit:contain}
+.photo-demo{min-width:0;width:100%;max-width:360px;margin:0 auto 24px}
+.photo-demo .demo-full{display:block;margin:0!important;background:transparent;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.photo-demo .demo-image{display:block;width:100%;height:auto}
 .photo-demo .demo-thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
 .photo-demo .demo-thumbs button{display:block;min-width:0;padding:3px;border:2px solid transparent;border-radius:8px;background:#171428;cursor:pointer}
 .photo-demo .demo-thumbs button[aria-pressed=true]{border-color:#c2a0ff}
@@ -8,4 +8,4 @@
 .photo-demo .demo-thumbs img{display:block;width:100%;height:76px;object-fit:cover;border-radius:4px}
 .photo-demo .demo-caption{font-size:13px;line-height:1.5;color:var(--muted);margin:10px 0 0}
 .photo-demo .demo-hint{font-size:12px;color:var(--muted);margin:6px 0 0}
-@media(max-width:640px){.photo-demo .demo-image{height:300px}.photo-demo .demo-thumbs img{height:64px}}
+@media(max-width:640px){.photo-demo .demo-thumbs img{height:64px}}
