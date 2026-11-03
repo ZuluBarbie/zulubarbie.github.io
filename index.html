@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css?v=purple-brand-2">
   <link rel="stylesheet" href="home.css?v=pixel-night-1">
   <link rel="stylesheet" href="interactive.css?v=1">
-  <script src="interactive.js?v=1" defer></script>
+  <script src="interactive.js?v=2" defer></script>
   <meta name="theme-color" content="#080b18">
   <link rel="canonical" href="https://zulubarbie.github.io/">
   <meta property="og:title" content="Noluthando Basi | Computer Engineering Portfolio">
@@ -19,6 +19,13 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=purple-2">
 <link rel="stylesheet" href="gallery.css?v=1">
 <script src="gallery.js?v=1" defer></script>
+  <style>
+    #project-results .card { position: relative; }
+    #project-results h3 .project-link { position: static; display: inline; color: inherit; font: inherit; text-decoration: none; margin: 0; padding: 0; }
+    #project-results .project-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+    #project-results .project-link:focus-visible::after { outline: 3px solid currentColor; outline-offset: -3px; }
+    #project-results .card :is(button, a:not(.project-link)) { position: relative; z-index: 2; }
+  </style>
 </head>
 <body class="night-home">
   <a class="skip-link" href="#projects">Skip to projects</a>
@@ -60,58 +67,58 @@
       <div class="project-grid" id="project-results">
         <article class="card featured">
           <div class="card-top"><span class="number">01</span><span class="tag">JAVA · SWING</span></div>
-          <h3>Circuit Desk</h3>
+          <h3><a class="project-link" href="https://github.com/ZuluBarbie/electronic-component-calculator">Circuit Desk</a></h3>
           <p>A desktop calculator for Ohm’s law, resistor and capacitor combinations, LED resistors, voltage dividers, and RC timing.</p>
           <p class="detail">Validates inputs and rejects nonfinite results. Requires JDK 17 or newer and a graphical desktop.</p>
-          <a href="https://github.com/ZuluBarbie/electronic-component-calculator">Explore Circuit Desk <span aria-hidden="true">↗</span></a>
+          
         </article>
         <article class="card">
           <div class="card-top"><span class="number">02</span><span class="tag">PYTHON · CLI</span></div>
-          <h3>Student Budget Calculator</h3>
+          <h3><a class="project-link" href="https://github.com/ZuluBarbie/student-budget-calculator">Student Budget Calculator</a></h3>
           <p>Calculate monthly income, expenses, and the remaining balance in South African rand, with exact decimal arithmetic.</p>
           <p class="detail">Runs with Python 3.10+. Budget entries stay in the current session; they are not saved or uploaded.</p>
-          <a href="https://github.com/ZuluBarbie/student-budget-calculator">Explore the budget calculator <span aria-hidden="true">↗</span></a>
+          
         </article>
         <article class="card">
           <div class="card-top"><span class="number">03</span><span class="tag">PYTHON · GAME</span></div>
-          <h3>Python Maze Game</h3>
+          <h3><a class="project-link" href="games/maze.html">Python Maze Game</a></h3>
           <p>Navigate three maze difficulties using W, A, S, and D. Reach the exit, track your moves, and improve your best score.</p>
           <p class="detail">Runs in a terminal with Python 3.10+. Best scores are saved locally beside the game.</p>
-          <a href="games/maze.html" aria-label="Play Python Maze Game in browser">Play in browser</a> &middot; <a href="https://github.com/ZuluBarbie/Practice" aria-label="View original code for Python Maze Game">View original code</a>
+           &middot; <a href="https://github.com/ZuluBarbie/Practice" aria-label="View original code for Python Maze Game">View original code</a>
         </article>
         <article class="card">
           <div class="card-top"><span class="number">04</span><span class="tag">C · GAME</span></div>
-          <h3>Rock Paper Scissors</h3>
+          <h3><a class="project-link" href="games/rps.html">Rock Paper Scissors</a></h3>
           <p>A first-to-three terminal match against a random computer opponent. Ties keep the score unchanged; invalid input is rejected.</p>
           <p class="detail">Build with a C11 compiler. Automated tests cover every round outcome and match scoring.</p>
-          <a href="games/rps.html" aria-label="Play Rock Paper Scissors in browser">Play in browser</a> &middot; <a href="https://github.com/ZuluBarbie/rock_paper_scissors_C" aria-label="View original code for Rock Paper Scissors">View original code</a>
+           &middot; <a href="https://github.com/ZuluBarbie/rock_paper_scissors_C" aria-label="View original code for Rock Paper Scissors">View original code</a>
         </article>
         <article class="card">
           <div class="card-top"><span class="number">05</span><span class="tag">HTML · CSS · JAVASCRIPT</span></div>
-          <h3>Done</h3><p class="subtitle">A little progress, every day.</p>
+          <h3><a class="project-link" href="https://github.com/ZuluBarbie/todo-list">Done</a></h3><p class="subtitle">A little progress, every day.</p>
           <p>Add, edit, complete, and filter tasks in a responsive to-do app. Progress updates as you work through your list.</p>
           <p class="detail">Run locally with Node.js 18+. Tasks are saved in the current browser, with no account or cross-device sync.</p>
-          <a href="https://github.com/ZuluBarbie/todo-list">Explore the to-do app <span aria-hidden="true">↗</span></a>
+          
         </article>
         <article class="card">
           <div class="card-top"><span class="number">06</span><span class="tag">PYTHON · SQLITE</span></div>
-          <h3>Study Flow</h3><p>A local student planner for modules, assignments, revision sessions, deadlines, and completion tracking.</p><p class="detail">Python 3.10+; records persist in a local SQLite database.</p>
-          <a href="https://github.com/ZuluBarbie/study-flow">Explore Study Flow <span aria-hidden="true">↗</span></a>
+          <h3><a class="project-link" href="https://github.com/ZuluBarbie/study-flow">Study Flow</a></h3><p>A local student planner for modules, assignments, revision sessions, deadlines, and completion tracking.</p><p class="detail">Python 3.10+; records persist in a local SQLite database.</p>
+          
         </article>
         <article class="card">
           <div class="card-top"><span class="number">07</span><span class="tag">C# · WINDOWS FORMS</span></div>
-          <h3>Snake</h3><p>A desktop Snake game with keyboard controls, scoring, pause, restart, and increasing difficulty.</p><p class="detail">Windows .NET Framework 4.x; source and executable included.</p>
-          <a href="games/snake.html" aria-label="Play Snake in browser">Play in browser</a> &middot; <a href="https://github.com/ZuluBarbie/snake-game" aria-label="View original code for Snake">View original code</a>
+          <h3><a class="project-link" href="games/snake.html">Snake</a></h3><p>A desktop Snake game with keyboard controls, scoring, pause, restart, and increasing difficulty.</p><p class="detail">Windows .NET Framework 4.x; source and executable included.</p>
+           &middot; <a href="https://github.com/ZuluBarbie/snake-game" aria-label="View original code for Snake">View original code</a>
         </article>
         <article class="card">
           <div class="card-top"><span class="number">08</span><span class="tag">C++ · WINDOWS</span></div>
-          <h3>Sudoku Studio</h3><p>A graphical Sudoku game with unique puzzles, pencil notes, hints, undo, and light and dark themes.</p><p class="detail">Windows desktop app; downloadable release and C++17 source.</p>
-          <a href="games/sudoku.html" aria-label="Play Sudoku Studio in browser">Play in browser</a> &middot; <a href="https://github.com/ZuluBarbie/sudoku-studio" aria-label="View original code for Sudoku Studio">View original code</a>
+          <h3><a class="project-link" href="games/sudoku.html">Sudoku Studio</a></h3><p>A graphical Sudoku game with unique puzzles, pencil notes, hints, undo, and light and dark themes.</p><p class="detail">Windows desktop app; downloadable release and C++17 source.</p>
+           &middot; <a href="https://github.com/ZuluBarbie/sudoku-studio" aria-label="View original code for Sudoku Studio">View original code</a>
         </article>
         <article class="card">
           <div class="card-top"><span class="number">09</span><span class="tag">C · MINIMAX</span></div>
-          <h3>Tic-Tac-Toe</h3><p>Play with a friend or challenge a Minimax computer opponent, with replay and session scores.</p><p class="detail">Portable terminal game; build with a C11 compiler.</p>
-          <a href="games/tic.html" aria-label="Play Tic-Tac-Toe in browser">Play in browser</a> &middot; <a href="https://github.com/ZuluBarbie/tic_tac_toe_C" aria-label="View original code for Tic-Tac-Toe">View original code</a>
+          <h3><a class="project-link" href="games/tic.html">Tic-Tac-Toe</a></h3><p>Play with a friend or challenge a Minimax computer opponent, with replay and session scores.</p><p class="detail">Portable terminal game; build with a C11 compiler.</p>
+           &middot; <a href="https://github.com/ZuluBarbie/tic_tac_toe_C" aria-label="View original code for Tic-Tac-Toe">View original code</a>
         </article>
         <article class="card featured">
           <div class="card-top"><span class="number">10</span><span class="tag">DIGITAL LOGIC · GROUP LEADER</span></div>
@@ -124,10 +131,10 @@
 <button type="button" data-gallery-photo="images/alu-demo-display.jpg" data-caption="4 / 4 - Display wiring from another angle" aria-label="Show photo 4: Side view of the breadboard, resistor bank and display connections" aria-pressed="false"><img src="images/alu-demo-display.jpg" alt="Side view of the breadboard, resistor bank and display connections" width="720" height="1280" loading="lazy"></button>
 </div>
 <p class="demo-caption" aria-live="polite">1 / 4 - Full prototype and display</p><p class="demo-hint">Choose a thumbnail to explore the build. Select the large photo to view it in full.</p></div>
-          <h3>1-bit NAND ALU</h3><p class="subtitle">From logic design to verified hardware</p>
+          <h3><a class="project-link" href="alu.html">1-bit NAND ALU</a></h3><p class="subtitle">From logic design to verified hardware</p>
           <p>I led this CPUT group project as its primary contributor, working across design, simulation, testing preparation and documentation.</p>
           <p class="detail">Verified hardware, 24 NAND gates and six 74HC00 packages. Eight static netlist cases also passed. A coursework case study with rights reserved.</p>
-          <a href="alu.html">Explore the ALU case study <span aria-hidden="true">↗</span></a>
+          
         </article>
       </div>
     </section>
@@ -138,6 +145,5 @@
     <section id="contact" class="contact" aria-labelledby="contact-title"><p class="eyebrow">KEEP IN TOUCH</p><h2 id="contact-title">Let’s connect.</h2><div class="contact-links"><a href="https://github.com/ZuluBarbie">GitHub ↗</a><a href="https://www.linkedin.com/in/noluthandobasi">LinkedIn ↗</a></div></section>
   </main>
   <footer class="wrap"><span>Noluthando Basi</span><span>Built with curiosity. Shared through code.</span></footer>
-  <dialog class="project-dialog" aria-labelledby="preview-title"><button class="dialog-close" type="button" aria-label="Close project preview">×</button><div class="preview-content"></div></dialog>
 </body>
 </html>

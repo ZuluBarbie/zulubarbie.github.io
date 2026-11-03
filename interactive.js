@@ -3,8 +3,6 @@
   const cards = [...document.querySelectorAll('#project-results .card')];
   const categories = ['engineering apps', 'apps', 'games', 'games', 'apps', 'apps', 'games', 'games', 'games', 'engineering'];
   const symbols = ['Ω', 'R', '⌘', '✂', '✓', '▦', '↳', '▦', '× ○', '&'];
-  const dialog = document.querySelector('.project-dialog');
-  const content = dialog.querySelector('.preview-content');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   cards.forEach((card, index) => {
@@ -16,33 +14,12 @@
     symbol.textContent = symbols[index];
     art.append(symbol);
     if (!card.querySelector('img')) card.prepend(art);
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'preview-button';
-    button.textContent = 'Quick look +';
-    button.setAttribute('aria-label', `Preview ${card.querySelector('h3').textContent}`);
-    button.addEventListener('click', () => {
-      content.replaceChildren();
-      for (const item of card.children) {
-        if (item === button || item === art) continue;
-        const clone = item.cloneNode(true);
-        if (clone.tagName === 'H3') clone.id = 'preview-title';
-        content.append(clone);
-      }
-      dialog.showModal();
-    });
-    card.append(button);
     card.addEventListener('pointermove', event => {
       if (reducedMotion.matches || !finePointer.matches) return;
       const bounds = card.getBoundingClientRect();
       card.style.setProperty('--glow-x', `${event.clientX - bounds.left}px`);
       card.style.setProperty('--glow-y', `${event.clientY - bounds.top}px`);
     });
-  });
-  dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => {
-    const bounds = dialog.getBoundingClientRect();
-    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
   });
   const search = document.querySelector('.project-search input');
   const filters = [...document.querySelectorAll('[data-filter]')];
