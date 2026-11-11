@@ -29,7 +29,7 @@
   </style>
   <link rel="stylesheet" href="journal.css?v=1">
   <link rel="stylesheet" href="desk.css?v=1">
-  <script src="desk.js?v=2" defer></script>
+  <script src="desk.js?v=3" defer></script>
 </head>
 <body class="night-home">
   <a class="skip-link" href="#projects">Skip to projects</a>
@@ -57,9 +57,9 @@
         <button class="desk-object" type="button" data-desk-panel="desk-coffee" aria-controls="desk-coffee" aria-expanded="false"><span class="desk-icon" aria-hidden="true">☕</span><strong>Coffee mug</strong><small>A little about me</small></button>
       </div>
       <section class="desk-panel" id="desk-circuit" aria-labelledby="circuit-title" hidden>
-        <button class="desk-close" type="button" aria-label="Close circuit challenge">Close</button><h3 id="circuit-title" tabindex="-1">One small circuit. One bright moment.</h3>
-        <p id="led-mission" role="status"></p><p>Simplified series circuit: supply → switch → resistor → LED → ground. Five missions, different voltages, one goal: find the right current.</p>
-        <div class="desk-controls"><label>Resistor<select id="led-resistor"><option value="none">No resistor</option><option value="100">100 Ω</option><option value="220">220 Ω</option><option value="330">330 Ω</option><option value="470">470 Ω</option><option value="680">680 Ω</option><option value="1000">1000 Ω</option></select></label><label>LED direction<select id="led-direction"><option value="reverse">Cathode (−) towards +5 V</option><option value="forward">Anode (+) towards +5 V</option></select></label><button type="button" id="led-power" aria-pressed="false">Switch: open</button><button type="button" id="led-reset">Reset</button><button type="button" id="led-next">Next mission →</button></div>
+        <button class="desk-close" type="button" aria-label="Close circuit challenge">Close</button><h3 id="circuit-title" tabindex="-1">💡 Breadboard Arcade</h3>
+        <p id="led-progress" aria-live="polite"></p><p id="led-mission"></p><p>Simplified series circuit: supply → switch → resistor → LED → ground. Pick a resistor, point the LED the right way, and flip the switch. Hit the target current to earn a ✅.</p>
+        <div class="desk-controls"><label>Resistor<select id="led-resistor"><option value="none">No resistor</option><option value="100">100 Ω</option><option value="220">220 Ω</option><option value="330">330 Ω</option><option value="470">470 Ω</option><option value="680">680 Ω</option><option value="1000">1000 Ω</option></select></label><label>LED direction<select id="led-direction"><option value="reverse">Cathode (−) towards +5 V</option><option value="forward">Anode (+) towards +5 V</option></select></label><button type="button" id="led-power" aria-pressed="false">Switch: open</button><button type="button" id="led-reset">Reset</button><button type="button" id="led-next">➡️ Next mission →</button></div>
         <p><span class="led-indicator" id="desk-led" aria-hidden="true"></span><strong id="led-status">LED off</strong></p><p class="desk-result" id="led-feedback" role="status"></p>
       </section>
       <section class="desk-panel" id="desk-notebook" aria-labelledby="notebook-title" hidden><button class="desk-close" type="button" aria-label="Close notebook">Close</button><h3 id="notebook-title" tabindex="-1">An open notebook.</h3><p>Currently learning: building for the web.</p><ul><li>HTML — giving a page its structure.</li><li>CSS — shaping how it looks and feels.</li></ul><p>I’m also making room to write about the learning itself.</p><a href="journal.html">Open my build journal →</a></section>

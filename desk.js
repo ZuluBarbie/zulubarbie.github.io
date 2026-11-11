@@ -45,14 +45,15 @@
   const resistor = document.getElementById('led-resistor');
   const direction = document.getElementById('led-direction');
   const missions = [
-    {v:5, drop:2, low:8, high:10, name:'First glow'},
-    {v:3.3, drop:2, low:3, high:5, name:'Battery saver'},
-    {v:9, drop:2, low:6, high:8, name:'High voltage, gentle glow'},
-    {v:5, drop:3, low:5, high:7, name:'Blue LED rescue'},
-    {v:9, drop:3, low:17, high:19, name:'Bright idea'}
+    {v:5, drop:2, low:8, high:10, name:'🌱 Wake the greenhouse · Give a tiny seedling its first glow'},
+    {v:3.3, drop:2, low:3, high:5, name:'🔋 Save the battery · Keep a pocket light running on a tiny current'},
+    {v:9, drop:2, low:6, high:8, name:'🛰️ Signal the satellite · Tame a 9 V supply for a gentle beacon'},
+    {v:5, drop:3, low:5, high:7, name:'🌊 Rescue the blue LED · Light up an underwater rover'},
+    {v:9, drop:3, low:17, high:19, name:'🎉 Power the party · Give the finale a brighter glow'}
   ];
   let mission = 0;
   const solved = new Set();
+  const progress = document.getElementById('led-progress');
   const brief = document.getElementById('led-mission');
   function updateLED() {
     const m = missions[mission];
@@ -64,10 +65,11 @@
     const lit = on && safe && forward;
     const win = lit && current >= m.low && current <= m.high;
     if (win) solved.add(mission);
-    brief.textContent = `${m.name} · ${m.v} V supply · assumed LED drop ${m.drop} V. Reach ${m.low}–${m.high} mA. ${solved.size}/${missions.length} missions solved.`;
+    brief.textContent = `${m.name} · ${m.v} V supply · assumed LED drop ${m.drop} V. Reach ${m.low}–${m.high} mA.`;
+    progress.textContent = missions.map((_, i) => solved.has(i) ? '✅' : i === mission ? '🎯' : '⬜').join(' ') + ` · ${solved.size}/${missions.length} solved`;
     document.getElementById('desk-led').classList.toggle('lit', lit);
     document.getElementById('led-status').textContent = lit ? 'LED on' : 'LED off';
-    document.getElementById('led-feedback').textContent = !on ? 'Choose your components, then close the switch. Hint: current = (supply − LED drop) ÷ resistance.' : !safe ? 'Too much current! This simulation blocks currents above 20 mA. Try a larger resistor.' : !forward ? 'Check the LED direction: its anode (+) should face the positive supply.' : win ? `Mission complete! ${current.toFixed(1)} mA. Try another mission.` : `${current.toFixed(1)} mA: the LED glows, but misses the target. Try a different resistor.`;
+    document.getElementById('led-feedback').textContent = !on ? '🧰 Pick your parts, then close the switch. 💡 Hint: current = (supply − LED drop) ÷ resistance.' : !safe ? '⚠️ Too much current! This simulation blocks currents above 20 mA. Try a larger resistor.' : !forward ? '🔄 Flip the LED: its anode (+) should face the positive supply.' : win ? `✨ Mission complete! ${current.toFixed(1)} mA. Try another mission.` : `${current.toFixed(1)} mA: the LED glows, but misses the target. 🎯 Try a different resistor.`;
   }
   document.getElementById('led-next').addEventListener('click', () => {
     mission = (mission + 1) % missions.length;
