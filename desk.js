@@ -14,7 +14,7 @@
     const next = remaining[Math.floor(Math.random() * remaining.length)];
     seen.push(next);
     try { localStorage.setItem('nb-facts-v2', JSON.stringify(seen)); } catch {}
-    document.getElementById('desk-fact').textContent = facts[next] + ` (${seen.length}/22 discovered)`;
+    document.getElementById('desk-fact').textContent = facts[next];
   }
   triggers.forEach(button => button.addEventListener('click', () => {
     const panel = document.getElementById(button.dataset.deskPanel);
