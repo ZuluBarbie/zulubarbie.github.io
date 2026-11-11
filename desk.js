@@ -8,11 +8,9 @@
   if (!Array.isArray(seen)) seen = [];
   seen = seen.filter(i => Number.isInteger(i) && i >= 0 && i < facts.length);
   function nextFact() {
-    const remaining = facts.map((_, i) => i).filter(i => !seen.includes(i));
-    if (!remaining.length) {
-      document.getElementById('desk-fact').textContent = 'You’ve discovered all 22 facts! Thanks for getting to know me.';
-      return;
-    }
+    const previous = seen.at(-1);
+    if (seen.length === facts.length) seen = [];
+    const remaining = facts.map((_, i) => i).filter(i => !seen.includes(i) && i !== previous);
     const next = remaining[Math.floor(Math.random() * remaining.length)];
     seen.push(next);
     try { localStorage.setItem('nb-facts-v2', JSON.stringify(seen)); } catch {}
