@@ -54,6 +54,32 @@
     output.querySelector('strong').textContent = String(value);
     output.classList.toggle('off', value === 0);
   }));
+  const rounds = [{target:0, a:null}, {target:1,a:true}, {target:1,a:false}, {target:0,a:null}, {target:1,a:null}];
+  let round = 0, score = 0, checked = false;
+  const missionText = document.getElementById('logic-mission');
+  function describeRound() {
+    const task = rounds[round];
+    missionText.textContent = `Round ${round + 1}/5: make output ${task.target}` + (task.a === null ? '.' : ` with A set to ${Number(task.a)}.`) + ` Score: ${score}.`;
+  }
+  document.getElementById('logic-check').addEventListener('click', () => {
+    if (checked) return;
+    const task = rounds[round];
+    const a = inputs[0].getAttribute('aria-pressed') === 'true';
+    const b = inputs[1].getAttribute('aria-pressed') === 'true';
+    const correct = Number(!(a && b)) === task.target && (task.a === null || a === task.a);
+    if (correct) { score++; checked = true; }
+    missionText.textContent = correct ? `Code cracked! Score ${score}/5. ` + (round === 4 ? 'Game complete — play again?' : 'Ready for the next round?') : 'Try again! NAND outputs 0 only when both inputs are 1. Check any extra input condition too.';
+  });
+  document.getElementById('logic-next').addEventListener('click', () => {
+    if (!checked) { missionText.textContent = 'Solve this round first. Flip A and B, then check your answer.'; return; }
+    round++;
+    if (round === rounds.length) { round = 0; score = 0; }
+    checked = false;
+    inputs.forEach(item => { item.setAttribute('aria-pressed', 'false'); item.querySelector('span').textContent = '0'; });
+    output.querySelector('strong').textContent = '1'; output.classList.remove('off');
+    describeRound();
+  });
+  describeRound();
   document.querySelector('.logic-lab').hidden = false;
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {

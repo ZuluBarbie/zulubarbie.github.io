@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css?v=purple-brand-2">
   <link rel="stylesheet" href="home.css?v=pixel-night-1">
   <link rel="stylesheet" href="interactive.css?v=1">
-  <script src="interactive.js?v=2" defer></script>
+  <script src="interactive.js?v=3" defer></script>
   <meta name="theme-color" content="#080b18">
   <link rel="canonical" href="https://zulubarbie.github.io/">
   <meta property="og:title" content="Noluthando Basi | Computer Engineering Portfolio">
@@ -28,7 +28,7 @@
   </style>
   <link rel="stylesheet" href="journal.css?v=1">
   <link rel="stylesheet" href="desk.css?v=1">
-  <script src="desk.js?v=1" defer></script>
+  <script src="desk.js?v=2" defer></script>
 </head>
 <body class="night-home">
   <a class="skip-link" href="#projects">Skip to projects</a>
@@ -57,8 +57,8 @@
       </div>
       <section class="desk-panel" id="desk-circuit" aria-labelledby="circuit-title" hidden>
         <button class="desk-close" type="button" aria-label="Close circuit challenge">Close</button><h3 id="circuit-title" tabindex="-1">One small circuit. One bright moment.</h3>
-        <p>Complete this simplified series circuit: 5 V supply → switch → resistor → LED → ground.</p>
-        <div class="desk-controls"><label>Resistor<select id="led-resistor"><option value="none">No resistor</option><option value="330">330 Ω</option></select></label><label>LED direction<select id="led-direction"><option value="reverse">Cathode (−) towards +5 V</option><option value="forward">Anode (+) towards +5 V</option></select></label><button type="button" id="led-power" aria-pressed="false">Switch: open</button><button type="button" id="led-reset">Reset</button></div>
+        <p id="led-mission" role="status"></p><p>Simplified series circuit: supply → switch → resistor → LED → ground. Five missions, different voltages, one goal: find the right current.</p>
+        <div class="desk-controls"><label>Resistor<select id="led-resistor"><option value="none">No resistor</option><option value="100">100 Ω</option><option value="220">220 Ω</option><option value="330">330 Ω</option><option value="470">470 Ω</option><option value="680">680 Ω</option><option value="1000">1000 Ω</option></select></label><label>LED direction<select id="led-direction"><option value="reverse">Cathode (−) towards +5 V</option><option value="forward">Anode (+) towards +5 V</option></select></label><button type="button" id="led-power" aria-pressed="false">Switch: open</button><button type="button" id="led-reset">Reset</button><button type="button" id="led-next">Next mission →</button></div>
         <p><span class="led-indicator" id="desk-led" aria-hidden="true"></span><strong id="led-status">LED off</strong></p><p class="desk-result" id="led-feedback" role="status"></p>
       </section>
       <section class="desk-panel" id="desk-notebook" aria-labelledby="notebook-title" hidden><button class="desk-close" type="button" aria-label="Close notebook">Close</button><h3 id="notebook-title" tabindex="-1">An open notebook.</h3><p>Currently learning: building for the web.</p><ul><li>HTML — giving a page its structure.</li><li>CSS — shaping how it looks and feels.</li></ul><p>I’m also making room to write about the learning itself.</p><a href="journal.html">Open my build journal →</a></section>
@@ -159,8 +159,8 @@
       </div>
     </section>
     <section class="logic-lab contact" aria-labelledby="lab-title" hidden>
-      <div><p class="eyebrow">03 / A LITTLE EXPERIMENT</p><h2 id="lab-title">Two inputs. One bright idea.</h2><p class="lead">Meet the NAND gate—the building block of my ALU project. Flip the inputs and see what happens.</p><a href="alu.html">See how these gates become an ALU ↗</a></div>
-      <div class="gate-panel"><p class="gate-label">NAND / LIVE LOGIC</p><div class="gate-circuit"><div class="gate-inputs"><button type="button" data-input="a" aria-pressed="false">A <span>0</span></button><button type="button" data-input="b" aria-pressed="false">B <span>0</span></button></div><span class="gate-symbol" aria-hidden="true">&amp; ○</span><output class="gate-output" aria-live="polite" aria-atomic="true">Output <strong>1</strong></output></div><p class="gate-explanation">The output is on unless both inputs are on.</p></div>
+      <div><p class="eyebrow">03 / A LITTLE EXPERIMENT</p><h2 id="lab-title">Crack the logic code.</h2><p class="lead">Play five logic rounds. Set the inputs to match each target, then check your answer. Can you get a perfect score?</p><a href="alu.html">See how these gates become an ALU ↗</a></div>
+      <div class="gate-panel"><p class="gate-label">NAND / LIVE LOGIC</p><div class="gate-circuit"><div class="gate-inputs"><button type="button" data-input="a" aria-pressed="false">A <span>0</span></button><button type="button" data-input="b" aria-pressed="false">B <span>0</span></button></div><span class="gate-symbol" aria-hidden="true">&amp; ○</span><output class="gate-output" aria-live="polite" aria-atomic="true">Output <strong>1</strong></output></div><p class="gate-explanation">The output is on unless both inputs are on.</p><p id="logic-mission" role="status"></p><button type="button" id="logic-check">Check answer</button><button type="button" id="logic-next">Next round</button></div>
     </section>
     <section id="journal" class="journal-section" aria-labelledby="journal-title">
       <div class="section-heading"><div><p class="eyebrow">04 / THE BUILD JOURNAL</p><h2 id="journal-title" class="journal-heading">Circuits, code &amp; the words between.</h2></div><p>Notes from an engineer and a writer.</p></div>
