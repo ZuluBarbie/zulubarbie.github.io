@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles.css?v=purple-brand-2">
   <link rel="stylesheet" href="home.css?v=pixel-night-1">
   <link rel="stylesheet" href="interactive.css?v=1">
-  <script src="interactive.js?v=3" defer></script>
+  <script src="interactive.js?v=4" defer></script>
   <meta name="theme-color" content="#080b18">
   <link rel="canonical" href="https://zulubarbie.github.io/">
   <meta property="og:title" content="Noluthando Basi | Software Development &amp; Design">
@@ -160,8 +160,8 @@
       </div>
     </section>
     <section class="logic-lab contact" aria-labelledby="lab-title" hidden>
-      <div><p class="eyebrow">03 / A LITTLE EXPERIMENT</p><h2 id="lab-title">Crack the logic code.</h2><p class="lead">Play five logic rounds. Set the inputs to match each target, then check your answer. Can you get a perfect score?</p><a href="alu.html">See how these gates become an ALU ↗</a></div>
-      <div class="gate-panel"><p class="gate-label">NAND / LIVE LOGIC</p><div class="gate-circuit"><div class="gate-inputs"><button type="button" data-input="a" aria-pressed="false">A <span>0</span></button><button type="button" data-input="b" aria-pressed="false">B <span>0</span></button></div><span class="gate-symbol" aria-hidden="true">&amp; ○</span><output class="gate-output" aria-live="polite" aria-atomic="true">Output <strong>1</strong></output></div><p class="gate-explanation">The output is on unless both inputs are on.</p><p id="logic-mission" role="status"></p><button type="button" id="logic-check">Check answer</button><button type="button" id="logic-next">Next round</button></div>
+      <div><p class="eyebrow">03 / A LITTLE EXPERIMENT</p><h2 id="lab-title">The midnight workshop.</h2><p class="lead">Five gadgets need your help. Flip the switches to match each signal and earn a star for every first-try solve.</p><a href="alu.html">See how these gates become an ALU ↗</a></div>
+      <div class="gate-panel"><p id="logic-progress"></p><h3 id="logic-title" tabindex="-1"></h3><p id="logic-mission"></p><p class="gate-label">NAND / LIVE LOGIC</p><div class="gate-circuit"><div class="gate-inputs"><button type="button" data-input="a" aria-pressed="false">A <span>0</span></button><button type="button" data-input="b" aria-pressed="false">B <span>0</span></button></div><span class="gate-symbol" aria-hidden="true">→</span><output class="gate-output" aria-live="polite" aria-atomic="true">Output <strong>1</strong></output></div><p class="gate-explanation">The output is on unless both inputs are on.</p><p id="logic-feedback" role="status"></p><button type="button" id="logic-check">Check answer</button><button type="button" id="logic-next" hidden>Next round</button></div>
     </section>
     <section id="journal" class="journal-section" aria-labelledby="journal-title">
       <div class="section-heading"><div><p class="eyebrow">04 / THE BUILD JOURNAL</p><h2 id="journal-title" class="journal-heading">Circuits, code &amp; the words between.</h2></div><p>Notes from an engineer and a writer.</p></div>
