@@ -33,6 +33,17 @@
         <aside class="journal-related" aria-label="Related project"><p class="eyebrow">FROM THE WORKBENCH</p><figure class="journal-photo"><img src="images/alu-demo-overview.jpg" alt="ALU breadboard prototype with jumper wires and a seven-segment display" width="720" height="1280" loading="lazy"><figcaption>A photograph from my 1-bit NAND ALU project.</figcaption></figure><p><a href="alu.html">Explore the ALU build and its lessons →</a></p></aside>
       </div>
     </article>
+    <article id="two-buttons" aria-labelledby="two-buttons-title">
+      <div class="journal-reading">
+        <p class="eyebrow">ENTRY 02 / BUILD NOTES</p>
+        <h2 id="two-buttons-title" class="journal-heading">Two buttons, one awkward question</h2>
+        <div class="journal-meta">Noluthando Basi · 1 min read</div>
+        <p>Our one-bit arithmetic circuit had two mode buttons, one for addition and one for subtraction. We used a latch so the circuit could remember which mode was selected after you let go. That worked neatly when you pressed one button at a time. But what if you pressed both?</p>
+        <p>In the design review, that turned out to be an invalid state for the latch. The circuit also needed a deliberate mode selection at startup. The arithmetic tests could tell us whether the circuit gave the right answer in a chosen mode. They couldn't answer every question about how it got into that mode.</p>
+        <p>That changed the questions I'd ask about the next version. What state should it start in? What should happen when two controls disagree? I'd put those cases in the test plan alongside the arithmetic. Two buttons looked like the simplest part of the circuit. They gave me some of the most useful questions.</p>
+        <p><a href="alu.html">Read the full ALU case study →</a></p>
+      </div>
+    </article>
   </main>
   <footer class="wrap"><span>Noluthando Basi</span><a href="./#journal">Back to the portfolio</a></footer>
 </body>
